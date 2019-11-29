@@ -1,0 +1,6 @@
+- hosts: redis
+  roles:
+  - docker-app-server
+  - redis
+  tags:
+  - redis
