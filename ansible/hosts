@@ -1,7 +1,5 @@
 [redis]
 redis-cluster      ansible_host=10.211.55.106 ansible_ssh_private_key_file=../.vagrant/machines/redis-cluster/virtualbox/private_key
-#redis2      ansible_host=10.55.0.3 ansible_ssh_private_key_file=../.vagrant/machines/redis2/virtualbox/private_key
-#redis3      ansible_host=10.55.0.4 ansible_ssh_private_key_file=../.vagrant/machines/redis3/virtualbox/private_key
 
 [redis:vars]
 ansible_user=vagrant
@@ -9,8 +7,6 @@ ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 
 [redis-sentinel]
 redis-cluster      ansible_host=10.211.55.106 ansible_ssh_private_key_file=../.vagrant/machines/redis-cluster/virtualbox/private_key
-#redis2      ansible_host=10.55.0.3 ansible_ssh_private_key_file=../.vagrant/machines/redis2/virtualbox/private_key
-#redis3      ansible_host=10.55.0.4 ansible_ssh_private_key_file=../.vagrant/machines/redis3/virtualbox/private_key
 
 [redis-sentinel:vars]
 ansible_user=vagrant
