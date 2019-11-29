@@ -8,12 +8,6 @@
 - python
 - python-pip
 
-**Table of Contents**
-
-[TOCM]
-
-[TOC]
-
 # High Availability Redis
 This `Vagrantfile` is based on `redis:3` and `haproxy:1.7`. It creates a three node Redis cluster with [redis-sentinel](https://redis.io/topics/sentinel) and haproxy. The proxy node will always route traffic to the current master node. Sentinel will handle automation failover.
 
@@ -27,9 +21,11 @@ vagrant up
 ## Table of ports
 Service       |  Host Port  | Container Port |
 :--------------:|:-----------:|:---------------:
-redis_proxy     | 6379        | 6379           
-redis_proxy     | 9000        | 9000           
-redis_1         | 32786       | 6379           
-redis_2         | 32788       | 6379           
-redis_3         | 32787       | 6379           
+redis_proxy     | 6379        | 6379
+redis_proxy     | 9000        | 9000
+redis_1         | 32786       | 6379
+redis_2         | 32788       | 6379
+redis_3         | 32787       | 6379
 
+#### Notes
+This deploys a complete redis sentinel cluster using docker images from https://github.com/guidolarrain1981/docker-redis forked from https://github.com/jmferrer/docker-redis
